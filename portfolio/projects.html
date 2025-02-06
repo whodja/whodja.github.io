@@ -1,1 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Holloway</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    <style>
+      body {background-color: #ff8f8f;  color: white;}
 
+      h1 {background-color: #ff8f8f; color: #2d2d2d; font-family: 'Times New Roman', Times, serif; font-size: 50px; text-align: center; margin: 0;}
+
+      .navbar {background-color: #2d2d2d; padding: 15px;}
+
+      .navbar a {color: white; text-decoration: none; padding: 10px 15px; display: inline-block;}
+
+      .dropdown {position: relative; display: inline-block;}
+
+      .dropdown-content {display: none; position: absolute; background-color: white; min-width: 160px; box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);}
+
+      .dropdown-content a {color: #2d2d2d; padding: 10px; text-decoration: none; display: block;}
+
+      .dropdown-content a:hover {background-color: #ddd;}
+    </style>
+  </head>
+  <body>
+    <h1><b>Reid Holloway</b></h1>
+    <br>
+    <div class="navbar">
+      <a href="#">Home</a>
+      <div class="dropdown">
+        <a href="#" onclick="toggleDropdown(event)">Menu</a>
+        <div class="dropdown-content" id="dropdownMenu">
+          <a href="resume.html">Resume</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+          <a href="projects.html">Projects</a>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function toggleDropdown(event) {
+        event.stopPropagation();
+        var dropdown = document.getElementById("dropdownMenu");
+        dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+      }
+
+      window.onclick = function () {
+        var dropdown = document.getElementById("dropdownMenu");
+        dropdown.style.display = "none";
+      };
+    </script>
+    <img src="Logo.png" alt="Website Logo" style="display: block; margin: 70px auto; max-width: 600px;">
+  </body>
+</html>
